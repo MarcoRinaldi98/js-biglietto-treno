@@ -24,20 +24,17 @@ let prezzoBiglietto;
 // funzione per il calcolo dello sconto sul prezzo del biglietto in base all'età
 if (anniPasseggero < 18) {
     prezzoBiglietto = (tariffa - ((tariffa * 20) / 100)).toFixed(2);
-    document.getElementById('tariffa').innerHTML = 'Hai diritto alla tariffa junior che prevede uno sconto del 20%';
-    document.getElementById('frase').innerHTML = 'Quindi il prezzo del tuo biglietto è di: ';
+    document.getElementById('tariffa').innerHTML = 'Hai diritto alla tariffa junior che prevede uno sconto del 20%!';
     document.getElementById('prezzo').innerHTML = prezzoBiglietto + '€';
     console.log(prezzoBiglietto);
 } else if (anniPasseggero > 65) {
     prezzoBiglietto = (tariffa - ((tariffa * 40) / 100)).toFixed(2);
-    document.getElementById('tariffa').innerHTML = 'Hai diritto alla tariffa senior che prevede uno sconto del 40%';
-    document.getElementById('frase').innerHTML = 'Quindi il prezzo del tuo biglietto è di: ';
+    document.getElementById('tariffa').innerHTML = 'Hai diritto alla tariffa senior che prevede uno sconto del 40%!';
     document.getElementById('prezzo').innerHTML = prezzoBiglietto + '€';
     console.log(prezzoBiglietto);
 } else {
     prezzoBiglietto = tariffa.toFixed(2);
-    document.getElementById('tariffa').innerHTML = 'Hai diritto alla tariffa base che non prevede sconti';
-    document.getElementById('frase').innerHTML = 'Quindi il prezzo del tuo biglietto è di: ';
+    document.getElementById('tariffa').innerHTML = 'Hai diritto alla tariffa base che non prevede sconti!';
     document.getElementById('prezzo').innerHTML = prezzoBiglietto + '€';
     console.log(prezzoBiglietto);
 }
